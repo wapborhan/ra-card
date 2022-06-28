@@ -1,3 +1,3 @@
 # Calculator
 
->> <a href="https://wapborhan.github.io/calculator/">Demo</a>
+>> <a href="https://code.wapborhan.com/ra-card/">Demo</a>
