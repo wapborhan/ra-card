@@ -1,31 +1,28 @@
-//function that display value 
-function dis(val) {
-    document.getElementById("result").value += val
-}
+const calculate = document.querySelector("#calculate");
 
+calculate.addEventListener("click", (e) => {
+  e.preventDefault();
 
-//function that evaluates the digit and return result 
-function solve() {
-    let x = document.getElementById("result").value
-    let y = eval(x)
-    document.getElementById("result").value = y
-}
+  // Data Pick
+  let cashprice = parseInt(document.getElementById("cashprice").value);
+  let dp = parseInt(document.getElementById("dp").value);
+  let condition = parseInt(document.getElementById("condition").value);
+  let percantage = parseInt(document.getElementById("purcentage").value);
+  let term = parseInt(document.getElementById("term").value);
 
+  // Show Cash Price
+  document.getElementById("cashres").innerHTML = cashprice;
 
-//function that clear the display 
-function clr() {
-    document.getElementById("result").value = ""
-}
+  // Show Hire Price
+  var dpcons = cashprice + condition;
+  var casbl = dpcons - dp;
+  var casper = (casbl * percantage) / 100;
+  var hire = casper * term;
+  var hireprice = cashprice + hire;
+  var parhire = parseFloat(hireprice);
+  console.log(typeof cashprice);
+  document.getElementById("hireres").innerHTML = parhire;
 
-//function that clear the display 
-function rot() {
-    let x = document.getElementById("result").value
-    document.getElementById("result").value = Math.sqrt(x);
-}
-
-
-//Delete Button
-function back() {
-    var value = document.getElementById("result").value;
-    document.getElementById("result").value = value.substr(0, value.length - 1);
-}
+  // Show Term
+  document.getElementById("termres").innerHTML = term;
+});
