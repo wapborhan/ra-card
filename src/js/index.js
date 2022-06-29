@@ -20,8 +20,20 @@ calculate.addEventListener("click", (e) => {
   var hire = casper * term;
   var hireprice = cashprice + hire;
   var parhire = parseFloat(hireprice);
-  console.log(typeof cashprice);
+
   document.getElementById("hireres").innerHTML = parhire;
+
+  // Show MRP
+  document.getElementById("mrp").innerHTML = parhire;
+
+  //Show DP
+  document.getElementById("dpres").innerHTML = dp;
+
+  //SHow Cash Balance
+  document.getElementById("cashbal").innerHTML = parhire - dp;
+
+  //Show Installment
+  document.getElementById("insres").innerHTML = term + " Months";
 
   // Show Term
   document.getElementById("termres").innerHTML = term;
