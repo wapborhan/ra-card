@@ -90,6 +90,7 @@ a.nav-icon::before {
 .main-wraper {
     margin-left: 455px;
     min-height: 100vh;
+    padding: 20px;
 }
 
 #wrapper {
@@ -395,3 +396,14 @@ a.nav-icon::before {
 @media only screen and (min-width: 992px) and (max-width: 1199px) {}
 
 @media only screen and (max-width: 1199px) {}
+
+
+.tbwd {
+    height: 10px;
+    width: 30px;
+    padding: 0 10px !important;
+}
+
+.tdpic {
+    width: 200px;
+}
