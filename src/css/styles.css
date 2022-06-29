@@ -400,10 +400,18 @@ a.nav-icon::before {
 
 .tbwd {
     height: 10px;
-    width: 30px;
+    width: 100px;
     padding: 0 10px !important;
+    text-align: right;
+}
+
+.tbwd1 {
+    height: 10px;
+    width: 50px;
+    padding: 0 10px !important;
+    text-align: left;
 }
 
 .tdpic {
-    width: 200px;
+    width: 150px;
 }
