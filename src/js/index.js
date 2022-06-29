@@ -7,6 +7,7 @@ calculate.addEventListener("click", (e) => {
   let cashprice = parseInt(document.getElementById("cashprice").value);
   let dp = parseInt(document.getElementById("dp").value);
   let condition = parseInt(document.getElementById("condition").value);
+  let dpcond = dp + condition;
   let percantage = parseInt(document.getElementById("purcentage").value);
   let term = parseInt(document.getElementById("term").value);
 
@@ -42,8 +43,8 @@ calculate.addEventListener("click", (e) => {
   document.getElementById("cashres").innerHTML = cashprice;
 
   // Show Hire Price
-  var dpcons = cashprice + condition;
-  var casbl = dpcons - dp;
+
+  var casbl = cashprice - dpcond;
   var casper = (casbl * percantage) / 100;
   var hire = casper * term;
   var hireprice = cashprice + hire;

@@ -415,3 +415,12 @@ a.nav-icon::before {
 .tdpic {
     width: 150px;
 }
+
+button#calculate {
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    transition: all linear 0.3s;
+}

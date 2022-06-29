@@ -52,7 +52,7 @@
                                 DP:
                             </label>
                             <div class="col-sm-8">
-                                <input type="number" class="form-control" id="dp" value="95000" min="1">
+                                <input type="number" class="form-control" id="dp" value="90000" min="1">
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                 Condition:
                             </label>
                             <div class="col-sm-7">
-                                <input type="number" class="form-control" id="condition" value="0" min="1">
+                                <input type="number" class="form-control" id="condition" value="5000" min="1">
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,9 @@
                         </div>
                     </div>
                 </div>
-                <button id="calculate">Calculate</button>
+                <div class="d-flex justify-content-center"> <button id="calculate"
+                        class="w-100 bg-success rounded">Calculate</button>
+                </div>
             </form>
         </div>
     </div>
@@ -166,54 +168,33 @@
             <div class="row">
                 <div class="col-sm-6">
                     Cash Price: <b id="cashres"></b>
-                    <table class="table table-bordered border-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">SL</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">3 Month</th>
-                                <th scope="col">
-                                    <b id="termres"></b> Month
-                                </th>
-                                <th scope="col">Credit BAL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><span id="insdate"></span></td>
-                                <td><span id="inst3"></span></td>
-                                <td><span id="instterm"></span></td>
-                                <td> <span id="creditbal"></span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+
                 </div>
-                <div class="col-sm-6">
-                    Hire Price: <b id="hireres"></b>
-                    <table class="table table-bordered border-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">SL</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Paid Amount</th>
-                                <th scope="col">Credit Bal</th>
-                                <th scope="col">Receiver</th>
-                                <th scope="col">Remarks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>26.04.22</td>
-                                <td>5000</td>
-                                <td>40000</td>
-                                <td>Sagor</td>
-                                <td> </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <div class="col-sm-6"> Hire Price: <b id="hireres"></b></div>
+
+                <table class="table table-bordered border-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">SL</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">3 Month</th>
+                            <th scope="col">
+                                <b id="termres"></b> Month
+                            </th>
+                            <th scope="col">Credit BAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><span id="insdate"></span></td>
+                            <td><span id="inst3"></span></td>
+                            <td><span id="instterm"></span></td>
+                            <td> <span id="creditbal"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
         </div>
 
