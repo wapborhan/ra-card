@@ -424,3 +424,7 @@ button#calculate {
     color: #fff;
     transition: all linear 0.3s;
 }
+
+.logoimg {
+    height: 80px !important;
+}
