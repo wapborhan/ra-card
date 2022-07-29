@@ -35,6 +35,8 @@ i {
 
 .imglogo {
     width: 80px;
+    background: white;
+    border-radius: 5px;
 }
 
 .navbar-mainbg {
