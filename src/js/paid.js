@@ -2,6 +2,7 @@ const calculate = document.querySelector("#calculate");
 
 calculate.addEventListener("click", (e) => {
   e.preventDefault();
+
   // Data Pick
   let cashprice = parseInt(document.getElementById("cashprice").value);
   let dp = parseInt(document.getElementById("dp").value);
@@ -9,32 +10,77 @@ calculate.addEventListener("click", (e) => {
   let dpcond = dp + condition;
   let collection = parseInt(document.getElementById("collection").value);
   let allcoll = dp + condition + collection;
+  let interest = parseInt(document.getElementById("interest").value);
   let term = parseInt(document.getElementById("term").value);
+  let saledate = document.getElementById("saledate").value;
 
-  //Show Cash Price
-  document.getElementById("rescashprice").innerHTML = cashprice;
+  //Date pick
 
-  //Show DP
-  document.getElementById("resdp").innerHTML = dp;
+  //Sale Date
 
-  //Show Condition
-  document.getElementById("rescondition").innerHTML = condition;
+  var d = new Date(saledate),
+    month = new Array();
+  (month[0] = "January"),
+    (month[1] = "February"),
+    (month[2] = "March"),
+    (month[3] = "April"),
+    (month[4] = "May"),
+    (month[5] = "June"),
+    (month[6] = "July"),
+    (month[7] = "August"),
+    (month[8] = "September"),
+    (month[9] = "October"),
+    (month[10] = "November"),
+    (month[11] = "December");
 
-  //Show Collection
-  document.getElementById("rescollection").innerHTML = collection;
+  //Sale Date Format
+  var month_name = month[d.getMonth()],
+    day_of_month = d.getDate(),
+    current_year = d.getFullYear(),
+    monthnum = d.getMonth() + 2;
 
-  //Show All Collection
-  document.getElementById("totalpay").innerHTML = allcoll;
+  var p = new Date();
+  //Sale Date Format
+  var p_month_name = month[p.getMonth()],
+    p_day_of_month = p.getDate(),
+    p_current_year = p.getFullYear();
 
-  //Show Term
-  document.getElementById("resterm").innerHTML = term + " Months";
+  //Today
+  var today = p_day_of_month + "-" + p_month_name + "-" + p_current_year;
 
-  // Show Hire Price
-  var casbl = cashprice - dpcond;
+  //Input Date
+  var formatsale = day_of_month + "-" + month_name + "-" + current_year;
 
-  var casper = (casbl * percantage) / 100;
-  var hire = casper * term;
-  var hireprice = cashprice + hire;
-  var parhire = parseFloat(hireprice);
-  document.getElementById("mrp").innerHTML = parhire;
+  // Table Data
+
+  //Show Sale Date
+  document.getElementById("inpdate").innerHTML = formatsale;
+
+  // //Show Hire Price
+  let extprice = cashprice - dpcond;
+  let inter = (extprice * interest) / 100;
+  let totalinter = inter * term;
+  let hireprice = cashprice + totalinter;
+  document.getElementById("inpcashprice").innerHTML = hireprice;
+
+  // //Show DP
+  document.getElementById("inpdp").innerHTML = dp;
+
+  // //Show Condition
+  document.getElementById("inpcondition").innerHTML = condition;
+
+  // //Show Collection
+  document.getElementById("inpcollection").innerHTML = collection;
+
+  // //Show All Collection
+  document.getElementById("inptotalpay").innerHTML = allcoll;
+
+  // //Show Bank Interest
+  document.getElementById("inpinterest").innerHTML = interest + " %";
+
+  // //Show Term
+  document.getElementById("inpterm").innerHTML = term + " Months";
+
+  //Show Paid Date
+  document.getElementById("paiddate").innerHTML = today;
 });

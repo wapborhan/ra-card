@@ -14,6 +14,19 @@ i {
     margin-right: 10px;
 }
 
+/* Custom */
+.tbwd,
+.tbwd1 {
+    padding: 2px !important;
+}
+
+.tbwd {
+    text-align: right;
+    margin-right: 10px;
+}
+
+/* Custom */
+
 /*----------bootstrap-navbar-css------------*/
 .navbar-logo {
     /* padding: 15px; */
