@@ -15,41 +15,37 @@ calculate.addEventListener("click", (e) => {
   let saledate = document.getElementById("saledate").value;
 
   //Date pick
-
-  //Sale Date
-
-  var d = new Date(saledate),
-    month = new Array();
-  (month[0] = "January"),
-    (month[1] = "February"),
-    (month[2] = "March"),
-    (month[3] = "April"),
-    (month[4] = "May"),
-    (month[5] = "June"),
-    (month[6] = "July"),
-    (month[7] = "August"),
-    (month[8] = "September"),
-    (month[9] = "October"),
-    (month[10] = "November"),
-    (month[11] = "December");
+  var d = new Date(saledate);
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   //Sale Date Format
-  var month_name = month[d.getMonth()],
-    day_of_month = d.getDate(),
-    current_year = d.getFullYear(),
-    monthnum = d.getMonth() + 2;
+  var s_month = month[d.getMonth()],
+    s_day = d.getDate(),
+    s_year = d.getFullYear();
 
   var p = new Date();
   //Sale Date Format
-  var p_month_name = month[p.getMonth()],
-    p_day_of_month = p.getDate(),
-    p_current_year = p.getFullYear();
+  var p_month = month[p.getMonth()],
+    p_day = p.getDate(),
+    p_year = p.getFullYear();
 
   //Today
-  var today = p_day_of_month + "-" + p_month_name + "-" + p_current_year;
-
+  var today = p_day + "-" + p_month + "-" + p_year;
   //Input Date
-  var formatsale = day_of_month + "-" + month_name + "-" + current_year;
+  var formatsale = s_day + "-" + s_month + "-" + s_year;
 
   // Table Data
   //Show Sale Date
