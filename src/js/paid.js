@@ -52,7 +52,6 @@ calculate.addEventListener("click", (e) => {
   var formatsale = day_of_month + "-" + month_name + "-" + current_year;
 
   // Table Data
-
   //Show Sale Date
   document.getElementById("inpdate").innerHTML = formatsale;
 
