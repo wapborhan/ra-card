@@ -58,9 +58,9 @@ calculate.addEventListener("click", (e) => {
 
   // //Show Hire Price
   let extprice = cashprice - dpcond;
-  let inter = (extprice * interest) / 100;
-  let totalinter = inter * term;
-  let hireprice = cashprice + totalinter;
+  let moninter = (extprice * interest) / 100;
+  let bankinter = moninter * term;
+  let hireprice = cashprice + bankinter;
   document.getElementById("inpcashprice").innerHTML = hireprice;
 
   // //Show DP
@@ -68,6 +68,12 @@ calculate.addEventListener("click", (e) => {
 
   // //Show Condition
   document.getElementById("inpcondition").innerHTML = condition;
+
+  // //Show Bank Interest
+  document.getElementById("inpbankinter").innerHTML = bankinter;
+
+  // //Show Monthly Bank Interest
+  document.getElementById("inpmonbaninter").innerHTML = moninter;
 
   // //Show Collection
   document.getElementById("inpcollection").innerHTML = collection;
