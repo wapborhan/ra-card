@@ -112,7 +112,8 @@ calculate.addEventListener("click", (e) => {
   document.getElementById("bninter").innerHTML = pbankinter;
 
   //Paid Monthly Bank Interest
-  document.getElementById("bnmoninter").innerHTML = pmoninter;
+  document.getElementById("hiredisc").innerHTML = hireprice - paidprice;
+
   //Paid Monthly Bank Interest
   var payable = paidprice - allcoll;
   document.getElementById("payable").innerHTML = payable;
