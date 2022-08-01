@@ -84,4 +84,36 @@ calculate.addEventListener("click", (e) => {
 
   //Show Paid Date
   document.getElementById("paiddate").innerHTML = today;
+
+  //Paid Hire Price
+
+  //Paid Months
+  //declare a variable to collect the  year, month, and days
+  var date = {};
+  var dateString = "";
+  let paidyear = p_year - s_year;
+  // console.log(paidmonth);
+
+  //get months
+  if (p_month >= s_month)
+    //get months when current month is greater
+    var monthAge = p_month - s_month;
+  else {
+    paidyear--;
+    var monthAge = 12 + p_month - s_month;
+  }
+
+  //get days
+  if (p_day >= s_day)
+    //get days when the current date is greater
+    var dateAge = p_day - s_day;
+  else {
+    monthAge--;
+    var dateAge = 31 + p_day - s_day;
+
+    if (monthAge < 0) {
+      monthAge = 11;
+      yearAge--;
+    }
+  }
 });
