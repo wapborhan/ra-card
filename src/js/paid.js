@@ -33,14 +33,18 @@ calculate.addEventListener("click", (e) => {
 
   //Sale Date Format
   var s_month = month[d.getMonth()],
+    s_monts = d.getMonth(),
     s_day = d.getDate(),
-    s_year = d.getFullYear();
+    s_year = d.getFullYear(),
+    s_years = d.getYear();
 
   var p = new Date();
   //Sale Date Format
   var p_month = month[p.getMonth()],
+    p_monts = p.getMonth(),
     p_day = p.getDate(),
-    p_year = p.getFullYear();
+    p_year = p.getFullYear(),
+    p_years = p.getYear();
 
   //Today
   var today = p_day + "-" + p_month + "-" + p_year;
@@ -85,35 +89,31 @@ calculate.addEventListener("click", (e) => {
   //Show Paid Date
   document.getElementById("paiddate").innerHTML = today;
 
-  //Paid Hire Price
-
   //Paid Months
-  //declare a variable to collect the  year, month, and days
-  var date = {};
-  var dateString = "";
-  let paidyear = p_year - s_year;
-  // console.log(paidmonth);
+  //get years
+  yearAge = p_years - s_years;
 
   //get months
-  if (p_month >= s_month)
-    //get months when current month is greater
-    var monthAge = p_month - s_month;
-  else {
-    paidyear--;
-    var monthAge = 12 + p_month - s_month;
-  }
+  monthAge = p_monts - s_monts;
 
-  //get days
-  if (p_day >= s_day)
-    //get days when the current date is greater
-    var dateAge = p_day - s_day;
-  else {
-    monthAge--;
-    var dateAge = 31 + p_day - s_day;
+  let paiddate = yearAge * 12 + monthAge;
 
-    if (monthAge < 0) {
-      monthAge = 11;
-      yearAge--;
-    }
-  }
+  //display the calculated age
+  document.getElementById("resmonth").innerHTML = paiddate + " Months ";
+
+  //Paid Hire Price
+  let pextprice = cashprice - dpcond;
+  let pmoninter = (pextprice * interest) / 100;
+  let pbankinter = pmoninter * paiddate;
+  let paidprice = cashprice + pbankinter;
+  document.getElementById("paidprice").innerHTML = paidprice;
+
+  //Paid Bank Interest
+  document.getElementById("bninter").innerHTML = pbankinter;
+
+  //Paid Monthly Bank Interest
+  document.getElementById("bnmoninter").innerHTML = pmoninter;
+  //Paid Monthly Bank Interest
+  var payable = paidprice - allcoll;
+  document.getElementById("payable").innerHTML = payable;
 });
