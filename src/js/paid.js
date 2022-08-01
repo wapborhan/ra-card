@@ -17,23 +17,23 @@ calculate.addEventListener("click", (e) => {
   //Date pick
   var d = new Date(saledate);
   const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
   ];
 
   //Sale Date Format
   var s_month = month[d.getMonth()],
-    s_monts = d.getMonth(),
+    s_months = d.getMonth(),
     s_day = d.getDate(),
     s_year = d.getFullYear(),
     s_years = d.getYear();
@@ -41,7 +41,7 @@ calculate.addEventListener("click", (e) => {
   var p = new Date();
   //Sale Date Format
   var p_month = month[p.getMonth()],
-    p_monts = p.getMonth(),
+    p_months = p.getMonth(),
     p_day = p.getDate(),
     p_year = p.getFullYear(),
     p_years = p.getYear();
@@ -94,7 +94,7 @@ calculate.addEventListener("click", (e) => {
   yearAge = p_years - s_years;
 
   //get months
-  monthAge = p_monts - s_monts;
+  monthAge = p_months - s_months;
 
   let paiddate = yearAge * 12 + monthAge;
 
@@ -111,7 +111,7 @@ calculate.addEventListener("click", (e) => {
   //Paid Bank Interest
   document.getElementById("bninter").innerHTML = pbankinter;
 
-  //Paid Monthly Bank Interest
+  //Paid Hire Discount
   document.getElementById("hiredisc").innerHTML = hireprice - paidprice;
 
   //Paid Monthly Bank Interest
