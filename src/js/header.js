@@ -79,5 +79,5 @@ jQuery(document).ready(function ($) {
 // });
 
 let link = document.querySelector(".link");
-link.setAttribute("target", "_BLANK");
-console.log(link);
+var setlink = link.setAttribute("target", "_BLANK");
+console.log(setlink);
