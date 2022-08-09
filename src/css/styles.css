@@ -226,7 +226,7 @@ i {
 .footer {
     background: linear-gradient(105deg, #6e99e6, #093c94);
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 /*END FOOTER SOCIAL DESIGN*/
@@ -430,8 +430,8 @@ button {
 
 /*END SOCIAL PROFILE CSS*/
 .copyright {
-    margin-top: 40px;
-    padding-top: 40px;
+    margin-top: 20px;
+    padding-top: 20px;
     color: #fff;
     font-size: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
