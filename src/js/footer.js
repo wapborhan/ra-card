@@ -1,10 +1,6 @@
 document.getElementById("footer").innerHTML = `  <div class="container">
 <div class="row">
-  <div class="col-sm-12">
-    <div class="text-center">
-      <img src="src/img/logo.png" alt="logo" class="footlogo">
-    </div>
-  </div>
+
   <div class="social mt-5">
     <ul>
       <li>
