@@ -24,8 +24,7 @@ document.getElementById("footer").innerHTML = `  <div class="container">
 <div class="row">
   <div class="col-lg-12 col-sm-12 col-xs-12">
     <p class="copyright">Copyright © 2022 RA Card | Developed By <a class="link"
-        href="https://www.wapborhan.com">Borhan
-        Uddin</a>.</p>
+        href="https://www.srdreamlab.com">SR Dream Lab</a>.</p>
   </div>
   <!--- END COL -->
 </div>
