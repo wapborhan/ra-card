@@ -1,7 +1,9 @@
 import React from "react";
 
 const AlertS = () => {
-  return <div className="alert alert-danger text-center">Test Version .</div>;
+  return (
+    <div className="mt-3 mx-4 alert alert-danger text-center">Beta Version</div>
+  );
 };
 
 export default AlertS;
