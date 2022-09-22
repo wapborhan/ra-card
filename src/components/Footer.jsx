@@ -1,7 +1,15 @@
 import React from "react";
 import "../assets/stylesheet/social.css";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaGithub,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
+  const d = new Date();
   return (
     <div class="footer" id="footer">
       <div class="container">
@@ -10,27 +18,27 @@ const Footer = () => {
             <ul>
               <li>
                 <a class="link" href="https://www.facebook.com/wapborhan">
-                  <i class="fab fa-facebook"></i>
+                  <FaFacebookF />
                 </a>
               </li>
               <li>
                 <a class="link" href="https://www.twitter.com/wapborhan">
-                  <i class="fab fa-twitter"></i>
+                  <FaTwitter />
                 </a>
               </li>
               <li>
                 <a class="link" href="https://www.instagram.com/wapborhan">
-                  <i class="fab fa-instagram"></i>
+                  <FaInstagram />
                 </a>
               </li>
               <li>
                 <a class="link" href="https://www.github.com/wapborhan">
-                  <i class="fab fa-github"></i>
+                  <FaGithub />
                 </a>
               </li>
               <li>
                 <a class="link" href="https://www.linkedin.com/in/wapborhan">
-                  <i class="fab fa-linkedin"></i>
+                  <FaLinkedinIn />
                 </a>
               </li>
             </ul>
@@ -40,7 +48,7 @@ const Footer = () => {
         <div class="row">
           <div class="col-lg-12 col-sm-12 col-xs-12">
             <p class="copyright">
-              Copyright © 2022 RA Card | Developed By{" "}
+              Copyright © {d.getFullYear()} RA Card | Developed By{" "}
               <a class="link" href="https://www.srdreamlab.com">
                 SR Dream Lab
               </a>
