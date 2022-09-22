@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/home";
 import Sale from "./pages/sale";
 import Paid from "./pages/paid";
@@ -13,7 +13,8 @@ function App() {
       <Header />
       <Alert />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="ra-card" />} />
+        <Route exact path="/ra-card" element={<Home />} />
         <Route exact path="/sale" element={<Sale />} />
         <Route exact path="/paid" element={<Paid />} />
       </Routes>
