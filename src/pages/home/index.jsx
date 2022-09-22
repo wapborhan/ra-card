@@ -1,4 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import saleIMG from "../../assets/images/sale.jpg";
+import paidIMG from "../../assets/images/paid.jpg";
 
 const index = () => {
   return (
@@ -6,26 +9,22 @@ const index = () => {
       <div className="container">
         <div className="row m-sm-3">
           <div className="col-md-6">
-            <a href="sale.html">
+            <NavLink to="/sale">
               <div className="card rounded ">
                 <img
-                  src="src/img/sale.jpg"
+                  src={saleIMG}
                   className="card-img-top img-flued"
-                  alt="..."
+                  alt="Sale"
                 />
               </div>
-            </a>
+            </NavLink>
           </div>
           <div className="col-md-6">
-            <a href="paid.html">
+            <NavLink to="/paid">
               <div className="card rounded">
-                <img
-                  src="src/img/paid.jpg"
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={paidIMG} className="card-img-top" alt="Paid" />
               </div>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

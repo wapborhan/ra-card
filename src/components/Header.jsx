@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <a class="navbar-brand" href="#">
+        <NavLink className="navbar-brand" to="/">
           RA Cards
-        </a>
+        </NavLink>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -17,23 +17,23 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item active">
-              <NavLink class="nav-link" to="/">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item ">
+              <NavLink className="nav-link" to="/">
                 Home
               </NavLink>
             </li>
-            <li class="nav-item">
-              <NavLink class="nav-link" to="/sale">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/sale">
                 Sale
               </NavLink>
             </li>{" "}
-            <li class="nav-item">
-              <NavLink class="nav-link" to="/paid">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/paid">
                 Paid
               </NavLink>
             </li>

@@ -5,11 +5,13 @@ import Sale from "./pages/sale";
 import Paid from "./pages/paid";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Alert from "./components/Alert";
 
 function App() {
   return (
     <Fragment>
       <Header />
+      <Alert />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/sale" element={<Sale />} />

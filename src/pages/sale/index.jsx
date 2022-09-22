@@ -1,10 +1,19 @@
 import React from "react";
+import Form from "./Form";
+import Result from "./Result";
 
 const index = () => {
   return (
-    <div>
-      <div className="sa">Sale</div>
-    </div>
+    <main className="containers m-4">
+      <div className="row">
+        <div className="col-md-5">
+          <Form />
+        </div>
+        <div className="col-md-7">
+          <Result />
+        </div>
+      </div>
+    </main>
   );
 };
 
