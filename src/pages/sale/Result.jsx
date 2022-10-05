@@ -1,6 +1,7 @@
 import React from "react";
 
-const Result = () => {
+const Result = (props) => {
+  console.log(props);
   return (
     <div className="main-wraper">
       <div className="card">
@@ -10,13 +11,19 @@ const Result = () => {
             <table className="table table-bordered border-dark info w-100">
               <tbody>
                 <tr>
-                  <td className="tbwd1">M.R.P.</td>
+                  <td className="tbwd1">Hire Price</td>
                   <td className="tbwd">
-                    <span id="mrp"></span>
+                    <span>{props.data.hirePrice}</span>
                   </td>
                 </tr>
                 <tr>
                   <td className="tbwd1">DP</td>
+                  <td className="tbwd">
+                    <span>{props.data.dp}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="tbwd1">Condition</td>
                   <td className="tbwd">
                     <span id="dpres"></span>
                   </td>
@@ -36,7 +43,7 @@ const Result = () => {
                 <tr>
                   <td className="tbwd1">Sale Date</td>
                   <td className="tbwd">
-                    <span id="date"></span>
+                    <span id="date">{props.date}</span>
                   </td>
                 </tr>
               </tbody>
