@@ -1,7 +1,7 @@
 import React from "react";
 
 const Result = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="main-wraper">
       <div className="card">
@@ -25,19 +25,19 @@ const Result = (props) => {
                 <tr>
                   <td className="tbwd1">Condition</td>
                   <td className="tbwd">
-                    <span id="dpres"></span>
+                    <span>{props.data.condition}</span>
                   </td>
                 </tr>
                 <tr>
                   <td className="tbwd1">Cash Bal</td>
                   <td className="tbwd">
-                    <span id="cashbal"></span>
+                    <span>{props.data.cashBalance}</span>
                   </td>
                 </tr>
                 <tr>
                   <td className="tbwd1">Instalment</td>
                   <td className="tbwd">
-                    <span id="insres"></span>
+                    <span>{props.data.term + " Months"}</span>
                   </td>
                 </tr>
                 <tr>

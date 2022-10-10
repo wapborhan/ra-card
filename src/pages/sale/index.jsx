@@ -5,13 +5,14 @@ export default class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cashPrice: "",
-      dp: "",
-      condition: "",
-      percentage: "",
-      term: "",
+      cashPrice: 0,
+      dp: 0,
+      condition: 0,
+      percentage: 0,
+      term: 0,
       isSubmitDisabled: true,
-      hirePrice: "",
+      hirePrice: 0,
+      cashBalance: 0,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -23,31 +24,42 @@ export default class index extends Component {
         // use dynamic name value to set our state object property
         [event.target.name]: event.target.value,
       },
-      function () {
-        this.canSubmit();
+      () => {
+        this.setState({
+          hirePrice: this.hirePrice(),
+        });
       }
     );
   }
-
-  canSubmit() {
+  /* HirePrice */
+  hirePrice() {
     const { cashPrice, dp, condition, percentage, term, hirePrice } =
       this.state;
-    // If Input Value is blank Button are Disable
-    if (
-      cashPrice.length > 0 &&
-      dp.length > 0 &&
-      percentage.length > 0 &&
-      term.length > 0
-    ) {
-      this.setState({
-        isSubmitDisabled: false,
-      });
-    } else {
-      this.setState({
-        isSubmitDisabled: true,
-      });
-    }
+    return (
+      this.state.price -
+      (this.state.price * this.totalDiscount()) / 100
+    ).toFixed(2);
   }
+
+  // canSubmit() {
+  //   const { cashPrice, dp, condition, percentage, term, hirePrice } =
+  //     this.state;
+  //   // If Input Value is blank Button are Disable
+  //   if (
+  //     cashPrice.length > 0 &&
+  //     dp.length > 0 &&
+  //     percentage.length > 0 &&
+  //     term.length > 0
+  //   ) {
+  //     this.setState({
+  //       isSubmitDisabled: false,
+  //     });
+  //   } else {
+  //     this.setState({
+  //       isSubmitDisabled: true,
+  //     });
+  //   }
+  // }
   // triggered on submit
   handleSubmit = (event) => {
     // get our const values by destructuring state
