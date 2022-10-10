@@ -35,6 +35,12 @@ const Result = (props) => {
                   </td>
                 </tr>
                 <tr>
+                  <td className="tbwd1">Interest</td>
+                  <td className="tbwd">
+                    <span>{props.data.interest}</span>
+                  </td>
+                </tr>
+                <tr>
                   <td className="tbwd1">Instalment</td>
                   <td className="tbwd">
                     <span>{props.data.term + " Months"}</span>

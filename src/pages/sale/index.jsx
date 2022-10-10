@@ -11,67 +11,55 @@ export default class index extends Component {
       percentage: 0,
       term: 0,
       isSubmitDisabled: true,
+      interest: 0,
       hirePrice: 0,
       cashBalance: 0,
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // triggered everytime value changes in our textboxes
   handleChange(event) {
     this.setState(
       {
-        // use dynamic name value to set our state object property
         [event.target.name]: event.target.value,
       },
       () => {
         this.setState({
-          hirePrice: this.hirePrice(),
+          hirePrice: this.hireprice(),
+          // hirePrice: this.hireprice(),
+          cashBalance: this.cashBalance(),
         });
       }
     );
   }
-  /* HirePrice */
-  hirePrice() {
-    const { cashPrice, dp, condition, percentage, term, hirePrice } =
-      this.state;
-    return (
-      this.state.price -
-      (this.state.price * this.totalDiscount()) / 100
-    ).toFixed(2);
+  /* Interest */
+  hireprice() {
+    const { cashPrice, dp, condition, percentage, term } = this.state;
+    const csh = parseInt(cashPrice);
+    const bal = cashPrice - dp - condition;
+    const hire = parseInt(((bal * percentage) / 100) * term);
+
+    const hirepric = hire + csh;
+    return hirepric;
   }
 
-  // canSubmit() {
-  //   const { cashPrice, dp, condition, percentage, term, hirePrice } =
-  //     this.state;
-  //   // If Input Value is blank Button are Disable
-  //   if (
-  //     cashPrice.length > 0 &&
-  //     dp.length > 0 &&
-  //     percentage.length > 0 &&
-  //     term.length > 0
-  //   ) {
-  //     this.setState({
-  //       isSubmitDisabled: false,
-  //     });
-  //   } else {
-  //     this.setState({
-  //       isSubmitDisabled: true,
-  //     });
-  //   }
+  // HirePrice
+  // hireprice() {
+  //   // console.log(this.state.cashPrice);
+  //   console.log(this.state.interest);
+  //   return this.state.cashPrice + this.state.interest;
   // }
-  // triggered on submit
-  handleSubmit = (event) => {
-    // get our const values by destructuring state
-    event.preventDefault();
+  // cashBalance
+  cashBalance() {
     const { cashPrice, dp, condition, percentage, term, hirePrice } =
       this.state;
-    // regular javascript alert function
-    alert(`Your type detail: \n
-           Desc: ${cashPrice} \n
-           Amount: ${dp} \n
-           `);
-  };
+    const dpitn = parseInt(dp);
+    const conditionin = parseInt(condition);
+    const dpcondt = parseInt(dpitn + conditionin);
+    console.log(dpcondt);
+
+    return this.hireprice() - dpcondt;
+  }
 
   render() {
     const d = new Date();
@@ -198,7 +186,7 @@ export default class index extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-center">
+                  {/* <div className="d-flex justify-content-center">
                     <button
                       id="calculate"
                       className="w-100 btn-success btn"
@@ -206,7 +194,7 @@ export default class index extends Component {
                     >
                       Calculate
                     </button>
-                  </div>
+                  </div> */}
                 </form>
               </div>
             </div>
