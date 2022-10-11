@@ -14,6 +14,8 @@ export default class index extends Component {
       interest: 0,
       hirePrice: 0,
       cashBalance: 0,
+      inst3: 0,
+      inst24: 0,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -26,39 +28,59 @@ export default class index extends Component {
       () => {
         this.setState({
           hirePrice: this.hireprice(),
-          // hirePrice: this.hireprice(),
+          interest: this.interest(),
           cashBalance: this.cashBalance(),
+          inst3: this.inst3(),
+          inst24: this.inst24(),
         });
       }
     );
   }
-  /* Interest */
+  /* Hire Price */
   hireprice() {
     const { cashPrice, dp, condition, percentage, term } = this.state;
     const csh = parseInt(cashPrice);
     const bal = cashPrice - dp - condition;
     const hire = parseInt(((bal * percentage) / 100) * term);
-
     const hirepric = hire + csh;
     return hirepric;
   }
 
-  // HirePrice
-  // hireprice() {
-  //   // console.log(this.state.cashPrice);
-  //   console.log(this.state.interest);
-  //   return this.state.cashPrice + this.state.interest;
-  // }
+  // Interest
+  interest() {
+    const { cashPrice, dp, condition, percentage, term } = this.state;
+    const bal = cashPrice - dp - condition;
+    const hire = parseInt(((bal * percentage) / 100) * term);
+    return hire;
+  }
   // cashBalance
   cashBalance() {
-    const { cashPrice, dp, condition, percentage, term, hirePrice } =
-      this.state;
+    const { dp, condition } = this.state;
     const dpitn = parseInt(dp);
     const conditionin = parseInt(condition);
     const dpcondt = parseInt(dpitn + conditionin);
-    console.log(dpcondt);
-
     return this.hireprice() - dpcondt;
+  }
+
+  // 3 Month Installment
+  inst3() {
+    const { cashPrice, dp, condition } = this.state;
+    const dpitn = parseInt(dp);
+    const conditionin = parseInt(condition);
+    const dpcond = parseInt(dpitn + conditionin);
+    const netbal = cashPrice - dpcond;
+    const inst3 = netbal / 3;
+    return inst3.toFixed(2);
+  }
+  // Term Month Installment
+  inst24() {
+    const { hirePrice, dp, condition, term } = this.state;
+    const dpitn = parseInt(dp);
+    const conditionin = parseInt(condition);
+    const dpcond = parseInt(dpitn + conditionin);
+    const netbal = hirePrice - dpcond;
+    const inst3 = netbal / term;
+    return inst3.toFixed(2);
   }
 
   render() {
@@ -81,7 +103,8 @@ export default class index extends Component {
     const month = months[d.getMonth()];
 
     const year = d.getFullYear();
-    const date = day + "-" + month + "-" + year;
+    const saledate = day + "-" + month + "-" + year;
+    const insdate = day - 1 + "-" + month + "-" + year;
 
     return (
       <main className="containers m-4">
@@ -200,7 +223,7 @@ export default class index extends Component {
             </div>
           </div>
           <div className="col-md-7">
-            <Result date={date} data={this.state} />
+            <Result saledate={saledate} insdate={insdate} data={this.state} />
           </div>
         </div>
       </main>

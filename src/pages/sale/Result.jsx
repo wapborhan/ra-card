@@ -49,7 +49,7 @@ const Result = (props) => {
                 <tr>
                   <td className="tbwd1">Sale Date</td>
                   <td className="tbwd">
-                    <span id="date">{props.date}</span>
+                    <span id="date">{props.saledate}</span>
                   </td>
                 </tr>
               </tbody>
@@ -58,11 +58,10 @@ const Result = (props) => {
           <div className="emi mt-4">
             <div className="row">
               <div className="col-sm-6">
-                Cash Price: <b id="cashres"></b>
+                Cash Price: <b> {props.data.cashPrice}</b>
               </div>
               <div className="col-sm-6">
-                {" "}
-                Hire Price: <b id="hireres"></b>
+                Hire Price: <b>{props.data.hirePrice}</b>
               </div>
 
               <table className="table table-bordered border-dark">
@@ -70,9 +69,9 @@ const Result = (props) => {
                   <tr>
                     <th scope="col">SL</th>
                     <th scope="col">Date</th>
-                    <th scope="col">3 Month</th>
+                    <th scope="col">3 Months </th>
                     <th scope="col">
-                      <b id="termres"></b> Month
+                      <b>{props.data.term}</b> Months
                     </th>
                     <th scope="col">Credit BAL</th>
                   </tr>
@@ -81,17 +80,16 @@ const Result = (props) => {
                   <tr>
                     <th scope="row">1</th>
                     <td>
-                      <span id="insdate"></span>
+                      <span>{props.insdate}</span>
                     </td>
                     <td>
-                      <span id="inst3"></span>
+                      <span>{props.data.inst3}</span>
                     </td>
                     <td>
-                      <span id="instterm"></span>
+                      <span>{props.data.inst24}</span>
                     </td>
                     <td>
-                      {" "}
-                      <span id="creditbal"></span>
+                      <span>{props.data.cashBalance}</span>
                     </td>
                   </tr>
                 </tbody>
