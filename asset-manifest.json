@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ra-card/static/css/main.016d7e6d.css",
-    "main.js": "/ra-card/static/js/main.8bcdd47d.js",
+    "main.css": "/ra-card/static/css/main.a6f4c179.css",
+    "main.js": "/ra-card/static/js/main.561d1c7e.js",
     "static/js/787.b3fa3039.chunk.js": "/ra-card/static/js/787.b3fa3039.chunk.js",
     "static/media/sale.jpg": "/ra-card/static/media/sale.c639f4c294ef0fbe4c38.jpg",
     "static/media/paid.jpg": "/ra-card/static/media/paid.0fd60c9461ce02a64950.jpg",
     "index.html": "/ra-card/index.html",
-    "main.016d7e6d.css.map": "/ra-card/static/css/main.016d7e6d.css.map",
-    "main.8bcdd47d.js.map": "/ra-card/static/js/main.8bcdd47d.js.map",
+    "main.a6f4c179.css.map": "/ra-card/static/css/main.a6f4c179.css.map",
+    "main.561d1c7e.js.map": "/ra-card/static/js/main.561d1c7e.js.map",
     "787.b3fa3039.chunk.js.map": "/ra-card/static/js/787.b3fa3039.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.016d7e6d.css",
-    "static/js/main.8bcdd47d.js"
+    "static/css/main.a6f4c179.css",
+    "static/js/main.561d1c7e.js"
   ]
 }
