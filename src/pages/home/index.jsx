@@ -6,8 +6,8 @@ import paidIMG from "../../assets/images/paid.jpg";
 const index = () => {
   return (
     <div className="main mt-5 mb-5">
-      <div className="container">
-        <div className="row m-sm-3">
+      <div className="container mb-5">
+        <div className="row m-sm-3 mb-5">
           <div className="col-md-6">
             <NavLink to="/sale">
               <div className="card rounded ">
