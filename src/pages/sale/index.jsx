@@ -209,15 +209,15 @@ export default class index extends Component {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center">
                     <button
                       id="calculate"
                       className="w-100 btn-success btn"
-                      disabled={this.state.isSubmitDisabled}
+                      // disabled={this.state.isSubmitDisabled}
                     >
                       Calculate
                     </button>
-                  </div> */}
+                  </div>
                 </form>
               </div>
             </div>
