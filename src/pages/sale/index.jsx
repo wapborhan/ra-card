@@ -1,25 +1,31 @@
 import React, { Component } from "react";
 import Result from "./Result";
+import SaleImg from "../../assets/images/sale.jpg";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
 export default class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cashPrice: 0,
-      dp: 0,
+      cashPrice: 37000,
+      dp: 14000,
       condition: 0,
-      percentage: 0,
-      term: 0,
+      percentage: 2,
+      term: 24,
       isSubmitDisabled: true,
       interest: 0,
       hirePrice: 0,
       cashBalance: 0,
       inst3: 0,
       inst24: 0,
+      modal: false,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
-
+  toggle() {
+    this.setState((state) => ({ modal: !state.modal }));
+  }
   handleChange(event) {
     this.setState(
       {
@@ -64,23 +70,15 @@ export default class index extends Component {
 
   // 3 Month Installment
   inst3() {
-    const { cashPrice, dp, condition } = this.state;
-    const dpitn = parseInt(dp);
-    const conditionin = parseInt(condition);
-    const dpcond = parseInt(dpitn + conditionin);
-    const netbal = cashPrice - dpcond;
-    const inst3 = netbal / 3;
+    const { cashBalance } = this.state;
+    const inst3 = cashBalance / 3;
     return inst3.toFixed(2);
   }
   // Term Month Installment
   inst24() {
-    const { hirePrice, dp, condition, term } = this.state;
-    const dpitn = parseInt(dp);
-    const conditionin = parseInt(condition);
-    const dpcond = parseInt(dpitn + conditionin);
-    const netbal = hirePrice - dpcond;
-    const inst3 = netbal / term;
-    return inst3.toFixed(2);
+    const { term, cashBalance } = this.state;
+    const inst24 = cashBalance / term;
+    return inst24.toFixed(2);
   }
 
   render() {
@@ -109,11 +107,16 @@ export default class index extends Component {
     return (
       <main className="containers m-4">
         <div className="row">
-          <div className="col-md-5">
+          <div className="col-md-4 offset-1">
+            <div className="card">
+              <img src={SaleImg} alt="" className="rounded" />
+            </div>
+          </div>
+          <div className="col-md-6">
             <div className="card">
               <div className="card-header">Sales Info</div>
               <div className="card-body">
-                <form onSubmit={this.handleSubmit}>
+                <form>
                   <div className="mb-3 row">
                     <label
                       htmlFor="cashprice"
@@ -209,23 +212,26 @@ export default class index extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-center">
-                    <button
-                      id="calculate"
-                      className="w-100 btn-success btn"
-                      // disabled={this.state.isSubmitDisabled}
-                    >
-                      Calculate
-                    </button>
-                  </div>
-                </form>
+                  <div className="d-flex justify-content-center"></div>
+                </form>{" "}
+                <button
+                  id="calculate"
+                  className="w-100 btn-success btn"
+                  onClick={this.toggle}
+                  // disabled={this.state.isSubmitDisabled}
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
-          <div className="col-md-7">
-            <Result saledate={saledate} insdate={insdate} data={this.state} />
-          </div>
         </div>
+        <Modal isOpen={this.state.modal} size="lg">
+          <ModalHeader toggle={this.toggle}>Calculate Card</ModalHeader>
+          <ModalBody>
+            <Result saledate={saledate} insdate={insdate} data={this.state} />
+          </ModalBody>
+        </Modal>
       </main>
     );
   }
