@@ -7,12 +7,11 @@ export default class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cashPrice: 37000,
-      dp: 14000,
+      cashPrice: 0,
+      dp: 0,
       condition: 0,
-      percentage: 2,
-      term: 24,
-      isSubmitDisabled: true,
+      percentage: 0,
+      term: 0,
       interest: 0,
       hirePrice: 0,
       cashBalance: 0,
@@ -103,17 +102,17 @@ export default class index extends Component {
     const year = d.getFullYear();
     const saledate = day + "-" + month + "-" + year;
     const insdate = day - 1 + "-" + month + "-" + year;
-
+    console.log(this.state);
     return (
       <main className="containers m-4">
         <div className="row">
-          <div className="col-md-4 offset-1">
-            <div className="card">
+          <div className="col-md-4 offset-md-1">
+            <div className="card mt-3">
               <img src={SaleImg} alt="" className="rounded" />
             </div>
           </div>
           <div className="col-md-6">
-            <div className="card">
+            <div className="card mt-3">
               <div className="card-header">Sales Info</div>
               <div className="card-body">
                 <form>
