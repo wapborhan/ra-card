@@ -6,6 +6,7 @@ import Paid from "./pages/paid";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Alert from "./components/Alert";
+import Sidebar from "./Sidebar";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/ra-card" element={<Home />} />
         <Route exact path="/sale" element={<Sale />} />
         <Route exact path="/paid" element={<Paid />} />
+        <Route exact path="/side" element={<Sidebar />} />
       </Routes>
       <Footer />
     </Fragment>
