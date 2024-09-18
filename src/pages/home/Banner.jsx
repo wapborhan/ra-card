@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import "swiper/css/navigation";
 
 const Banner = () => {
   return (
@@ -24,11 +23,13 @@ const Banner = () => {
               <div className="slider-content">
                 <h1>
                   <small>We give you</small>
-                  Quality <span>Auto Repair</span>
+                  Quality <span>Auto Parts</span>
                 </h1>
                 <p className="slider-desc">
-                  Auto Painting &amp; Collision Repair Shop. We help you turn
-                  the car you drive back into the car you love!
+                  At our shop, {"you'll"} find top-quality motorcycle and
+                  electric rickshaw parts of all kinds. We guarantee
+                  high-quality products at affordable prices. Visit us today for
+                  fast and reliable delivery services!
                 </p>
                 <a href="#" className="btn btn-primary">
                   Get Appointment

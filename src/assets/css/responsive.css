@@ -2,25 +2,30 @@
 ================================================== */
 /* Extra Large Device */
 @media (min-width: 1400px) {
+
   /* Box skew right */
   .box-skew-right {
     left: -175px;
     padding-left: 115px;
   }
 
-  .box-skew-right img {
+  /* .box-skew-right img {
     right: 188px;
-  }
+  } */
 }
+
 /* Large Devices, Wide Screens */
 @media (min-width: 1200px) {
+
   /* Indicator */
   .ts-indicator {
     display: none;
   }
 }
+
 /* Medium Devices, Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+
   /* Navbar */
   .navbar .nav-item {
     margin-right: 12px;
@@ -102,10 +107,12 @@
   .ts-about .box-skew-left {
     width: 100%;
   }
+
   .ts-about .box-skew-left:after {
     left: -65px;
   }
 }
+
 /* Small Devices, Tablets */
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-nav .nav-item .dropdown-menu {
@@ -405,12 +412,15 @@
   .ts-header-standard {
     position: relative;
   }
+
   .ts-header-standard .navbar .nav-item .nav-link {
     padding: 11px 0;
   }
+
   .ts-header-standard .navbar .nav-item .nav-link::after {
     display: none;
   }
+
   .ts-header-standard .navbar-light .navbar-toggler {
     position: absolute;
     right: 0;
@@ -483,7 +493,8 @@
     padding-bottom: 40px;
   }
 
-  .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-nav .nav-item .dropdown-menu li a.active {
+  .navbar-nav .nav-item .dropdown-menu li a:hover,
+  .navbar-nav .nav-item .dropdown-menu li a.active {
     color: #fff;
     background: #ab2727;
   }
@@ -504,20 +515,25 @@
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
   }
+
   .ts-fun-facts .box-skew-sm-left {
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
   }
-  .ts-fun-facts .no-gutters > .col, .ts-fun-facts .no-gutters > [class*=col-] {
+
+  .ts-fun-facts .no-gutters>.col,
+  .ts-fun-facts .no-gutters>[class*=col-] {
     padding-right: 0;
     padding-left: 40px;
   }
+
   .ts-fun-facts .box-skew-area-right {
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
     margin-left: -120px;
     height: auto;
   }
+
   .ts-fun-facts .box-skew-sm-right {
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
@@ -529,8 +545,10 @@
     margin-bottom: 0;
   }
 }
+
 /* Small Devices Potrait */
 @media (max-width: 767px) {
+
   /* Topbar */
   .ts-logo img {
     max-width: 162px;
@@ -580,12 +598,15 @@
     margin-bottom: 10px;
     display: none;
   }
+
   .footer-box:nth-child(1) {
     border-radius: 0;
-}
-.footer-box:nth-child(3) {
-  border-radius: 0;
-}
+  }
+
+  .footer-box:nth-child(3) {
+    border-radius: 0;
+  }
+
   .top-contact-info li {
     margin-left: 0;
   }
@@ -650,7 +671,8 @@
     min-width: inherit;
   }
 
-  .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-nav .nav-item .dropdown-menu li a.active {
+  .navbar-nav .nav-item .dropdown-menu li a:hover,
+  .navbar-nav .nav-item .dropdown-menu li a.active {
     color: #fff;
     background: #101010;
   }
@@ -823,7 +845,7 @@
     margin: 0;
   }
 
-  .ts-main-form > section {
+  .ts-main-form>section {
     padding-left: 5px;
     padding-right: 10px;
   }
@@ -963,7 +985,7 @@
     margin-top: 0px;
   }
 
-  .ts-feature .widget-contact .contactMe > section {
+  .ts-feature .widget-contact .contactMe>section {
     padding: 40px 7px 40px 15px;
   }
 
@@ -1024,15 +1046,19 @@
   .ts-header-standard {
     position: relative;
   }
+
   .ts-header-standard .ts-logo {
     max-width: 180px;
   }
+
   .ts-header-standard .navbar .nav-item .nav-link {
     padding: 11px 0;
   }
+
   .ts-header-standard .navbar .nav-item .nav-link::after {
     display: none;
   }
+
   .ts-header-standard .navbar-light .navbar-toggler {
     position: absolute;
     right: 0;
@@ -1055,7 +1081,7 @@
     margin-bottom: 40px;
   }
 
-  .ts-newsletter .box-skew-sm-right > img {
+  .ts-newsletter .box-skew-sm-right>img {
     left: 0;
   }
 
@@ -1076,14 +1102,16 @@
     display: none;
   }
 
-  .ts-header-transparent .navbar-nav .nav-item .dropdown-menu li a:hover, .ts-header-transparent .navbar-nav .nav-item .dropdown-menu li a.active {
+  .ts-header-transparent .navbar-nav .nav-item .dropdown-menu li a:hover,
+  .ts-header-transparent .navbar-nav .nav-item .dropdown-menu li a.active {
     color: #fff;
     background: #ee3131;
   }
 
-  .ts-header-transparent .ts-logo > img {
+  .ts-header-transparent .ts-logo>img {
     max-width: 180px;
   }
+
   .ts-header-transparent .navbar-light .navbar-toggler {
     right: 0;
     left: auto;
@@ -1091,14 +1119,17 @@
     top: -37px;
     cursor: pointer;
   }
+
   .ts-header-transparent .ts-navbar {
     background: #101010;
   }
+
   .ts-header-transparent .navbar .nav-item .nav-link {
     padding: 19px 18px;
   }
 
-  .ts-header-transparent .navbar-light .navbar-nav .nav-link:focus, .ts-header-transparent .navbar-light .navbar-nav .nav-link:hover {
+  .ts-header-transparent .navbar-light .navbar-nav .nav-link:focus,
+  .ts-header-transparent .navbar-light .navbar-nav .nav-link:hover {
     color: #fff;
   }
 
@@ -1153,17 +1184,21 @@
     width: 100%;
     padding: 20px 15px;
   }
+
   .ts-about-us .box-content-wrapper p {
     margin-bottom: 0;
   }
+
   .ts-about-us .box-skew-left:after {
     width: 100%;
   }
+
   .ts-about-us .box-skew-left img {
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
     position: relative;
   }
+
   .ts-about-us .overflow-hidden .box-skew-left {
     height: 100%;
   }
@@ -1218,26 +1253,32 @@
   .ts-pricing-intro .sidebar .widget {
     padding: 35px 20px;
   }
+
   .ts-pricing-intro .social-icons li a i {
     width: 35px;
     height: 35px;
     line-height: 35px;
   }
+
   .ts-pricing-intro .ts-rating li i {
     font-size: 14px;
   }
+
   .ts-pricing-intro .box-skew-left {
     width: 100%;
   }
+
   .ts-pricing-intro .box-skew-left img {
     position: relative;
     width: 100%;
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
   }
+
   .ts-pricing-intro .overflow-hidden .box-skew-left {
     height: auto;
   }
+
   .ts-pricing-intro .overflow-hidden .box-skew-right {
     width: 100%;
     padding-left: 20px;
@@ -1270,6 +1311,7 @@
 
 
 }
+
 /* Extra Small Devices, Phones */
 
 
@@ -1277,6 +1319,7 @@
 
 /* Custom, iPhone Retina */
 @media (max-width: 478px) {
+
   /* Navbar */
   section,
   .section {
@@ -1306,9 +1349,11 @@
     margin-bottom: 5px;
     width: 92%;
   }
+
   .ts-history-tab .ts-tab.nav-tabs .nav-link {
     width: 85%;
   }
+
   .ts-history-tab .tab-pane {
     margin-top: 20px;
   }

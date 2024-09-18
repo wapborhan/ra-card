@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="footer" id="footer">
@@ -7,14 +9,14 @@ const Footer = () => {
             <div className="col-md-4 footer-box">
               <i className="icon icon-map-marker2"></i>
               <div className="footer-box-content">
-                <h3>Birmingham, Alaska</h3>
-                <p>1014 Retreat Avenue</p>
+                <h3>Bheramara, Kushtia, Khulna.</h3>
+                <p>Head Office</p>
               </div>
             </div>
             <div className="col-md-4 footer-box">
               <i className="icon icon-phone3"></i>
               <div className="footer-box-content">
-                <h3>+(91) 458 654 528</h3>
+                <h3>+(880) 1719 033 880</h3>
                 <p>Give us a call</p>
               </div>
             </div>
@@ -22,13 +24,12 @@ const Footer = () => {
               <i className="icon icon-envelope"></i>
               <div className="footer-box-content">
                 <h3>
-                  <a
-                    href="https://demo.themewinter.com/cdn-cgi/l/email-protection"
+                  <Link
+                    to="mailto:mail.rubelauto@gmail.com"
                     className="__cf_email__"
-                    data-cfemail="1d74737b725d7972707c7473337e7270"
                   >
-                    [email&#160;protected]
-                  </a>
+                    mail.rubelauto@gmail.com
+                  </Link>
                 </h3>
                 <p>24/7 online support</p>
               </div>
@@ -50,9 +51,11 @@ const Footer = () => {
                 </a>
               </div>
               <p>
-                A wonderful serenity taken possession into entire soul like to
-                these sweet of tence this spot which was the main part created
-                the bliss often souls like mine.
+                Rubel Auto started its journey in 2009 as a dealer of Runner
+                Automobiles PLC, then in 2012, dealing in all types of
+                motorcycle, easybike parts business for a long time with
+                honesty, integrity and reputation. It also has its own service
+                center.
               </p>
               <div className="footer-social">
                 <ul className="unstyled">
@@ -87,57 +90,54 @@ const Footer = () => {
 
             <div className="col-lg-4 col-md-6 footer-widget widget-service">
               <h3 className="widget-title">
-                <span>Our</span> Services
+                <span>Our</span> Showroom
               </h3>
               <ul className="unstyled">
                 <li>
-                  <a href="#">Engine Diagnostics</a>
+                  <Link to="/">Bheramara Showroom</Link>
                 </li>
                 <li>
-                  <a href="#">Lube, Oil and Filters</a>
+                  <Link to="/">Dashuria Showroom</Link>
                 </li>
                 <li>
-                  <a href="#">Computer Diagnostics</a>
+                  <Link to="/">Meherpur Shoowroom</Link>
                 </li>
                 <li>
-                  <a href="#">Anti-Lock Brake</a>
-                </li>
+                  <Link to="/">Motorcycle Parts</Link>
+                </li>{" "}
                 <li>
-                  <a href="#">Air Conditioning Evac</a>
-                </li>
-                <li>
-                  <a href="#">Performance Upgrades</a>
+                  <Link to="/">Auto Parts</Link>
                 </li>
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 footer-widget">
               <h3 className="widget-title">
-                <span>Service</span> Hours
+                <span>Office</span> Time
               </h3>
               <ul className="unstyled service-time">
                 <li>
                   <span>Saturday</span>
-                  <span>7.00 - 16.10</span>
+                  <span>09.00 AM - 08.30 PM</span>
                 </li>
                 <li>
-                  <span>SUnday</span>
-                  <span>7.00 - 16.10</span>
+                  <span>Sunday</span>
+                  <span>09.00 AM - 08.30 PM</span>
                 </li>
                 <li>
                   <span>Monday</span>
-                  <span>7.00 - 16.30</span>
+                  <span>09.00 AM - 08.30 PM</span>
                 </li>
                 <li>
                   <span>Tuesday</span>
-                  <span>7.00 - 16.00</span>
+                  <span>09.00 AM - 08.30 PM</span>
                 </li>
                 <li>
                   <span>Wednesday</span>
-                  <span>7.00 - 16.20</span>
+                  <span>09.00 AM - 08.30 PM</span>
                 </li>
                 <li>
                   <span>Thursday</span>
-                  <span>7.00 - 16.00</span>
+                  <span>09.00 AM - 08.30 PM</span>
                 </li>
               </ul>
             </div>
@@ -150,16 +150,21 @@ const Footer = () => {
             <div className="col-lg-6 col-md-12">
               <div className="copyright-info">
                 <span>
-                  Copyright © 2009 - 2023 Rubel Auto. All Rights Reserved.
+                  Copyright © 2009 - {new Date().getFullYear()} Rubel Auto. All
+                  Rights Reserved.
                 </span>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
               <div className="footer-menu text-right">
-                Designed By{" "}
-                <a href="#" className="text-white">
+                Developed By{" "}
+                <Link
+                  to="https://www.srdreamlab.com"
+                  target="__BLANK"
+                  className="text-white"
+                >
                   SR Dream Lab
-                </a>{" "}
+                </Link>{" "}
               </div>
               {/* <div className="footer-menu">
                 <ul className="nav unstyled">

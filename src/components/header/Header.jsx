@@ -10,9 +10,9 @@ const Header = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-4 col-sm-4">
-                <a className="ts-logo" href="index.html">
+                <Link className="ts-logo" to="/">
                   <img src="/images/logo/logo.png" alt="logo" />
-                </a>
+                </Link>
               </div>
               <div className="col-md-8 col-sm-8 float-right">
                 <ul className="top-contact-info">
@@ -42,7 +42,7 @@ const Header = () => {
                     </div>
                   </li>
                   <li>
-                    <Link href="#" className="btn btn-primary">
+                    <Link to="/" className="btn btn-primary">
                       contact us
                     </Link>
                   </li>
@@ -72,57 +72,31 @@ const Header = () => {
               >
                 <ul className="navbar-nav">
                   <li className="nav-item active">
-                    <NavLink
-                      className="nav-link active"
-                      href="#"
-                      data-toggle="dropdown"
-                    >
+                    <NavLink className="nav-link active" to="/">
                       Home
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="dropdown">
+                    <NavLink className="nav-link" to="/">
                       About
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="dropdown">
+                    <NavLink className="nav-link" to="/">
                       Services
-                    </a>
+                    </NavLink>
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="dropdown">
-                      Blog
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a className="nav-link" href="contact.html">
+                    <NavLink className="nav-link" to="/">
                       Contact
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
 
               <div className="header-cart">
                 <div className="cart-link">
-                  <form action="#">
-                    <button type="button">
-                      <i className="icon icon-search show"></i>
-                    </button>
-                    <button>
-                      <i className="icon icon-cross"></i>
-                    </button>
-                    <div className="search-box">
-                      <input
-                        type="search"
-                        name="search"
-                        id="search"
-                        placeholder="Type here and Search..."
-                      />
-                    </div>
-                  </form>
                   <a href="#">
                     <i className="icon icon-cart2"></i>
                     <sup>2</sup>
